@@ -1,0 +1,34 @@
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slight-slide-from-right {
+  animation: slight-slide-from-right 1.5s;
+}
+
+.slight-slide-from-left {
+  animation: slight-slide-from-left 1.5s;
+}
+
+@keyframes slight-slide-from-right {
+  from {
+    opacity: 0.0;
+    right: -20px;
+  }
+}
+
+@keyframes slight-slide-from-left {
+  from {
+    opacity: 0.0;
+    margin-left: -100px;
+  }
+}
+
+
+
+
