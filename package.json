@@ -12,6 +12,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "copy": "cp ./CNAME ./build/CNAME",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
