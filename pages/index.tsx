@@ -1,7 +1,26 @@
 import type { NextPage } from 'next'
+import Header from '../components/Header'
+
 const Home: NextPage = () => {
   return (
-    <h1 className="p-5">Hey, I'm Jacob</h1>
+    <>
+      <section>
+        <Header />
+      </section>
+
+      <section>
+        {/* Add home component */}
+      </section>
+      <section>
+        {/* add about component */}
+      </section>
+      <section>
+        {/* add projects component */}
+      </section>
+      <section>
+        {/* add contact component */}
+      </section>
+    </>
   )
 }
 
