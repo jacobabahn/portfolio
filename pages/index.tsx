@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
+import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -7,9 +8,8 @@ const Home: NextPage = () => {
       <section>
         <Header />
       </section>
-
       <section>
-        {/* Add home component */}
+        <Hero />
       </section>
       <section>
         {/* add about component */}
