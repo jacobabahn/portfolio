@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 
 const Header = () => {
   return (
-    <header className="">
-      <div className="flex flex-row fixed w-1/2 items-center justify-around bg-black">
+    <header className="sticky top-0">
+      <div className="flex flex-row items-center justify-around">
         <motion.div
-          initial={{ x: -100, scale: 0.5 }}
+          initial={{ x: 100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
           transition={{ duration: 0.5 }}
           className="float-right pr-20"
@@ -19,11 +19,11 @@ const Header = () => {
           initial={{ x: 100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-10 float-left pr-20 text-sm sm:text:md"
+          className="flex flex-row gap-10 float-left pr-20"
         >
-          <button className="text-gray-400 tracking-[0.25em]">Home</button>
-          <button className="text-gray-400 tracking-[0.25em]">About</button>
-          <button className="text-gray-400 tracking-[0.25em]">Projects</button>
+          <h2 className="text-gray-400 text-md tracking-[0.25em]">Home</h2>
+          <h2 className="text-gray-400 text-md tracking-[0.25em]">About</h2>
+          <h2 className="text-gray-400 text-md tracking-[0.25em]">Projects</h2>
         </motion.div>
       </div>
     </header>
