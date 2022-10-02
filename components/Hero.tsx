@@ -4,15 +4,15 @@ import { motion } from 'framer-motion'
 
 const Hero = () => {
   const [text, count] = useTypewriter({
-    words: ["", "Hey, I'm Jacob"],
+    words: ["", "Hey, I'm Jacob Bahn"],
     delaySpeed: 1000
   })
 
   return (
     <div className="h-screen w-screen flex flex-col space-y-8 items-center justify-evenly text-center overflow-hidden">
       <motion.div
-        initial={{ x: -500, scale: 0.5 }}
-        animate={{ x: 0, scale: 1.0 }}
+        initial={{ y: 500, scale: 0.5 }}
+        animate={{ y: 0, scale: 1.0 }}
         transition={{ duration: 0.75 }}
       >
         <h1 className="text-5xl lg:text-7xl tracking-wide">
@@ -22,9 +22,15 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1.0 }}
-          transition={{ delay: 2.5, duration: 2.0 }}
+          transition={{ delay: 3.0, duration: 2.0 }}
         >
           <p className="uppercase text-lg pt-10 tracking-[0.5em] text-gray-400">Software Engineer</p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1.0 }}
+          transition={{ delay: 0.0, duration: 0.0 }}
+        >
         </motion.div>
       </motion.div>
     </div>
