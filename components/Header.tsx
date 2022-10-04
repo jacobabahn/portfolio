@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const Header = () => {
   return (
     <header className="flex flex-row justify-center">
-      <div className="flex flex-row fixed w-8/12 3xl:w-1/2 items-center justify-between mt-3" id="nav">
+      <div className="flex flex-row fixed w-11/12 md:w-7/12 max-w-screen-2xl items-center justify-between mt-3" id="nav">
         <motion.div
           initial={{ x: -100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
@@ -19,7 +19,7 @@ const Header = () => {
           initial={{ x: 100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-10 pr-7 float-left text-sm md:text-md"
+          className="flex flex-row gap-5 md:gap-10 pr-7 float-left text-sm md:text-md font-medium"
         >
           <button className="text-gray-400 tracking-[0.25em]">Home</button>
           <button className="text-gray-400 tracking-[0.25em]">About</button>
