@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import About from '../components/About'
+import Projects from '../components/Projects'
 
 const Home: NextPage = () => {
   return (
@@ -19,8 +20,8 @@ const Home: NextPage = () => {
       <section id="about" className="snap-center flex justify-center">
         <About />
       </section>
-      <section>
-        {/* add projects component */}
+      <section id="projects" className="snap-center flex justify-center">
+        <Projects />
       </section>
       <section>
         {/* add contact component */}
