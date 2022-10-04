@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 const Header = () => {
   return (
     <header className="flex flex-row justify-center">
-      <div className="flex flex-row fixed w-7/12 3xl:w-1/2 items-center justify-between mt-3" id="nav">
+      <div className="flex flex-row fixed w-8/12 3xl:w-1/2 items-center justify-between mt-3" id="nav">
         <motion.div
           initial={{ x: -100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
