@@ -17,3 +17,13 @@ html {
   border: 1px solid rgba(0, 0, 0, 0.09);
   border: .15rem solid rgba(65, 65, 65, 0.10);
 }
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 text-gray-400 border-transparent border-2 rounded-lg uppercase tracking-[0.20em] hover:text-white hover:border-zinc-900 hover:border-0.5 hover:shadow-[inset_13rem_0_0_0] hover:shadow-stone-700 duration-[400ms,700ms] transition-[color,box-shadow];
+  }
+
+  .navBtn {
+    @apply text-gray-400 px-4 py-2 border-transparent border-2 rounded-lg tracking-[0.20em] uppercase transition-all hover:border-neutral-700 hover:border-2 active:-translate-y-1;
+  }
+}

@@ -13,9 +13,10 @@ const Hero = () => {
   return (
     <div className="h-screen w-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <motion.div
-        initial={{ y: 500, scale: 0.5 }}
+        initial={{ y: 500, scale: 0.5, opacity: 0 }}
         animate={{ y: 0, scale: 1.0 }}
         transition={{ duration: 0.75 }}
+        whileInView={{ opacity: 1 }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-wide">
           <span>{text}</span>
@@ -32,13 +33,13 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1.0 }}
-        transition={{ delay: 4.0, duration: 2.0 }}
+        transition={{ delay: 4.0, duration: 1.0 }}
         className="grid grid-rows-2 gap-10 pt-12"
       >
         <motion.div
           initial={{ x: -200 }}
           animate={{ x: 0 }}
-          transition={{ delay: 4.0, duration: 2.0 }}
+          transition={{ delay: 4.5, duration: 2.0 }}
           className="grid grid-cols-4 gap-5"
         >
           <ReactLogo size="70" />
@@ -49,7 +50,7 @@ const Hero = () => {
         <motion.div
           initial={{ x: 100 }}
           animate={{ x: 0 }}
-          transition={{ delay: 4.0, duration: 2.0 }}
+          transition={{ delay: 4.5, duration: 2.0 }}
           className="grid grid-cols-4 gap-5"
         >
           <Css3 size="70" />

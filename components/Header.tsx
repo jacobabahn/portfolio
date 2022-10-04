@@ -1,11 +1,12 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from "framer-motion"
+import Link from 'next/link'
 
 const Header = () => {
   return (
     <header className="flex flex-row justify-center">
-      <div className="flex flex-row fixed w-11/12 md:w-7/12 max-w-screen-2xl items-center justify-between mt-3" id="nav">
+      <div className="flex flex-row fixed w-11/12 md:w-7/12 max-w-screen-2xl items-center justify-between mt-3 z-10" id="nav">
         <motion.div
           initial={{ x: -100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
@@ -19,11 +20,17 @@ const Header = () => {
           initial={{ x: 100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-row gap-5 md:gap-10 pr-7 float-left text-sm md:text-md font-medium"
+          className="flex flex-row gap-1 pr-4 float-left text-sm md:text-md font-medium"
         >
-          <button className="text-gray-400 tracking-[0.25em]">Home</button>
-          <button className="text-gray-400 tracking-[0.25em]">About</button>
-          <button className="text-gray-400 tracking-[0.25em]">Projects</button>
+          <Link href="#hero">
+            <button className="navBtn">Home</button>
+          </Link>
+          <Link href="#about">
+            <button className="navBtn">About</button>
+          </Link>
+          <Link href="#projects">
+            <button className="navBtn">Projects</button>
+          </Link>
         </motion.div>
       </div>
     </header>
