@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import portrait from './../public/portrait.jpg'
+import portrait from './../public/portrait.png'
 
 const About = () => {
   return (
