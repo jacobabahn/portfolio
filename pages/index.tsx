@@ -7,7 +7,7 @@ import Projects from '../components/Projects'
 
 const Home: NextPage = () => {
   return (
-    <div className="h-screen snap-y snap-mandatory overflow-scroll">
+    <div className="h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden">
       <Head>
         <title>Jacob's Portfolio</title>
       </Head>
