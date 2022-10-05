@@ -5,7 +5,7 @@ import portrait from './../public/portrait.png'
 const About = () => {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left max-w-7xl md:flex-row px-10 justify-evenly items-center">
-      <h2 className="absolute top-32 text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">About</h2>
+      <h2 className="absolute top-24 2xl:top-32 text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">About</h2>
       <motion.img
         initial={{ x: -200, opacity: 0 }}
         transition={{ duration: 1.2 }}

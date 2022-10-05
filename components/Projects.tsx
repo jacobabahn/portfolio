@@ -6,7 +6,7 @@ import ConstraintBackground from './../public/ConstraintBackground.png'
 const Projects = () => {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left max-w-5xl px-10 justify-center gap-10 items-center">
-      <div className="absolute top-32 text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">Projects</div>
+      <div className="absolute top-24 2xl:top-32 text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">Projects</div>
       <motion.img
         initial={{ y: -200, opacity: 0 }}
         transition={{ duration: 1.2 }}
