@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import ConstraintMockup from '../public/ConstraintMockup.png'
-import ConstraintBackground from '../public/ConstraintBackground.png'
+import ConstraintMockup from './../public/ConstraintMockup.png'
+import ConstraintBackground from './../public/ConstraintBackground.png'
 
 const Projects = () => {
   return (
