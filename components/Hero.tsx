@@ -17,6 +17,7 @@ const Hero = () => {
         animate={{ y: 0, scale: 1.0 }}
         transition={{ duration: 0.75 }}
         whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-wide">
           <span>{text}</span>

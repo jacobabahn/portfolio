@@ -10,6 +10,7 @@ const About = () => {
         initial={{ x: -200, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         src={portrait.src}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-64 rounded-lg object-cover md:w-96 md:h-auto m-5"
       />
@@ -17,6 +18,7 @@ const About = () => {
         initial={{ x: 200, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         className=""
       >
         <p className="text-xl md:text-3xl">
