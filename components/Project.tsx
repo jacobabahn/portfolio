@@ -14,7 +14,7 @@ const Project = (props: Props) => {
         src={props.src}
         className="-mb-20 mx-auto md:mb-0 md:mt-28 w-96 h-56 rounded-lg shadow-lg object-cover md:w-10/12 md:h-auto m-5"
       />
-      <p className="text-xl md:text-2xl px-2 tracking-wider text-center">{props.text}</p>
+      <p className="text-xl bg-[#242424] md:text-2xl px-2 tracking-wider text-center">{props.text}</p>
     </div>
   )
 }

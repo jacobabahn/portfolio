@@ -6,9 +6,9 @@ import PrSim from './../public/PrSimLRU.png'
 const Projects = () => {
   return (
     <div className="h-full flex flex-col relative text-center md:text-left max-w-5xl px-10 justify-evenly items-center">
-      <h4 className="absolute top-24 2xl:top-32  text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">Projects</h4>
+      <h4 className="absolute bg-[#242424] top-36 2xl:top-40  text-gray-400 text-center text-3xl md:text-4xl tracking-[0.35em] uppercase">Projects</h4>
 
-      <div className="relative h-full flex flex-col overflow-h-scroll overflow-x-hidden snap-y snap-mandatory">
+      <div className="relative h-full mt-5 flex flex-col overflow-h-scroll overflow-x-hidden snap-y snap-mandatory">
         <section className="snap-center">
           <Project
             src={ConstraintBackground.src}

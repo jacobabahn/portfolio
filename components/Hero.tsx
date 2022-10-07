@@ -19,7 +19,7 @@ const Hero = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-wide">
+        <h1 className="bg-[#242424] text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-wide">
           <span>{text}</span>
           <Cursor />
         </h1>
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ x: -200 }}
           animate={{ x: 0 }}
           transition={{ delay: 4.5, duration: 2.0 }}
-          className="grid grid-cols-4 gap-5"
+          className="bg-[#242424] grid grid-cols-4 gap-5"
         >
           <ReactLogo size="70" />
           <Javascript size="70" />
@@ -52,7 +52,7 @@ const Hero = () => {
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ delay: 4.5, duration: 2.0 }}
-          className="grid grid-cols-4 gap-5"
+          className="bg-[#242424] grid grid-cols-4 gap-5"
         >
           <Css3 size="70" />
           <Python size="70" />

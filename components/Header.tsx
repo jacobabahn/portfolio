@@ -6,7 +6,7 @@ import Link from 'next/link'
 const Header = () => {
   return (
     <header className="flex flex-row justify-center">
-      <div className="flex flex-row fixed w-11/12 md:w-9/12 2xl:w-7/12 max-w-screen-2xl items-center justify-center md:justify-between mt-3 z-10" id="nav">
+      <div className="flex flex-row fixed w-11/12 md:w-9/12 2xl:w-7/12 max-w-screen-2xl items-center justify-center md:justify-between mt-9 z-10" id="nav">
         <motion.div
           initial={{ x: -100, scale: 0.5 }}
           animate={{ x: 0, scale: 1.0 }}
