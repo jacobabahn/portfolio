@@ -6,7 +6,7 @@
 
 html {
   background: linear-gradient(90deg,#242424 49px,transparent 1%) 50%,linear-gradient(#242424 49px,transparent 1%) 50%;
-  background-color: rgba(100, 100, 100, 0.1);
+  background-color: rgba(100, 100, 100);
   background-size: 50px 50px;
   /* background: rgb(40,49,59); */
   /* background: linear-gradient(90deg, rgba(40,49,59,1) 23%, rgba(72,84,97,1) 91%); */
