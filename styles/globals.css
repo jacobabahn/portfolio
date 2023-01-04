@@ -31,6 +31,6 @@ html {
   }
 
   .navBtn {
-    @apply text-gray-400 px-4 py-2 border-transparent border-2 rounded-lg tracking-[0.20em] uppercase transition-all hover:border-neutral-700 hover:border-2 active:-translate-y-1;
+    @apply text-gray-400 mx-1 px-4 py-2 border-transparent border-2 rounded-lg tracking-[0.20em] uppercase transition-all hover:border-neutral-700 hover:border-2 active:-translate-y-1;
   }
 }
