@@ -22,10 +22,15 @@ const About = () => {
         className=""
       >
         <p className="ml-0 md:ml-10 bg-[#242424] text-xl md:text-3xl">
-          I am a Masters student studying Computer Science.
-          My hobbies include working out, basketball, football, cars, and of course, technology.
-          Some development languages I've worked with are Python, JavaScript(React), TypeScript, and C++.
+          I am a Software Engineer with a M.S and B.S in Computer Science. I have a passion for 
+          learning new technologies and creating things.
         </p>
+        <br />
+        <p className="ml-0 md:ml-10 bg-[#242424] text-xl md:text-3xl">
+          My hobbies include working out, basketball, football, and of course, technology.
+          Some development languages I've worked with are Python, JavaScript, TypeScript, Go, and C++.
+          I am proficient in the React library and have experience with the Next.js framework.
+         </p>
       </motion.div>
     </div>
   )
