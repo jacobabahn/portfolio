@@ -12,7 +12,7 @@ const About = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src={portrait.src}
-        className="mt-28 md:mb-0 flex-shrink-0 w-56 h-64 rounded-lg object-cover md:w-96 md:h-auto m-5"
+        className="mt-48 md:mt-0 md:mb-0 flex-shrink-0 w-56 h-64 rounded-lg object-cover md:w-96 md:h-auto m-5"
       />
       <motion.div
         initial={{ x: 200, opacity: 0 }}
