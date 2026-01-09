@@ -20,9 +20,9 @@ export function Hero() {
 
   return (
     <section className="mb-24">
-      <div className="mb-8 flex items-center justify-between gap-6">
-        <div className="flex items-center gap-6">
-          <div className="relative h-24 w-24 overflow-hidden rounded-full ring-2 ring-border ring-offset-4 ring-offset-background md:h-28 md:w-28">
+      <div className="mb-8 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div className="flex items-center gap-4 md:gap-6">
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-2 ring-border ring-offset-4 ring-offset-background md:h-28 md:w-28">
             <Image
               src="https://i.imgur.com/B9EDe7T.jpeg"
               alt="Jacob Bahn"
@@ -31,13 +31,13 @@ export function Hero() {
               priority
             />
           </div>
-          <div>
-            <h1 className="mb-4 text-balance text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+          <div className="min-w-0">
+            <h1 className="mb-2 text-3xl font-bold tracking-tight md:mb-4 md:text-6xl lg:text-7xl">
               Jacob Bahn
             </h1>
-            <p className="flex items-center gap-4 text-xl text-muted-foreground md:text-2xl">
-              <span className="flex items-center gap-2">
-                <MapPin className="h-6 w-6 text-red-900/65" />
+            <p className="flex flex-wrap items-center gap-2 text-base text-muted-foreground md:gap-4 md:text-2xl">
+              <span className="flex items-center gap-1 md:gap-2">
+                <MapPin className="h-4 w-4 text-red-900/65 md:h-6 md:w-6" />
                 Seattle
               </span>
               <span>·</span>
@@ -45,7 +45,7 @@ export function Hero() {
             </p>
           </div>
         </div>
-        <div className="flex self-start pt-2 pr-10 gap-3">
+        <div className="gap-3 hidden md:flex">
           <a
             href="https://linkedin.com/in/jacobbahn"
             target="_blank"
