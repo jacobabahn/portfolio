@@ -24,7 +24,7 @@ export function Hero() {
         <div className="flex items-center gap-6">
           <div className="relative h-24 w-24 overflow-hidden rounded-full ring-2 ring-border ring-offset-4 ring-offset-background md:h-28 md:w-28">
             <Image
-              src="/jbahn.jpg"
+              src="https://i.imgur.com/B9EDe7T.jpeg"
               alt="Jacob Bahn"
               fill
               className="object-cover scale-120  transition-transform duration-300 hover:scale-110"
