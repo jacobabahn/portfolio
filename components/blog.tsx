@@ -3,31 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 
 const posts = [
   {
-    title: "Building Performant React Applications",
-    date: "Jan 15, 2026",
-    excerpt:
-      "Exploring optimization techniques for modern React apps, from code splitting to server components.",
-    href: "#",
-  },
-  {
-    title: "TypeScript Best Practices for Scalable Projects",
-    date: "Dec 28, 2025",
-    excerpt:
-      "How to structure your TypeScript codebase for maintainability and type safety at scale.",
-    href: "#",
-  },
-  {
-    title: "The Art of API Design",
-    date: "Dec 10, 2025",
-    excerpt:
-      "Principles and patterns for creating developer-friendly APIs that stand the test of time.",
-    href: "#",
-  },
-  {
-    title: "Server Actions in Next.js: A Deep Dive",
-    date: "Nov 22, 2025",
-    excerpt:
-      "Understanding the power of server actions and how they simplify data mutations in Next.js.",
+    title: "In the Works",
+    date: "TBD",
+    excerpt: "Something insightful or cool",
     href: "#",
   },
 ];

@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { Experience } from "@/components/experience";
 import { Projects } from "@/components/projects";
 import { Blog } from "@/components/blog";
+import { Research } from "@/components/research";
 // import { Footer } from "@/components/footer";
 
 export default function Page() {
@@ -12,6 +13,7 @@ export default function Page() {
       <main className="mx-auto max-w-4xl px-6 py-16 md:py-24">
         <Hero />
         <Experience />
+        <Research />
         <Projects />
         <Blog />
       </main>

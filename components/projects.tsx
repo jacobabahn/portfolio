@@ -10,24 +10,23 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "GitBarn Web Portal",
     description:
       "A full-stack e-commerce solution with payment processing, inventory management, and real-time analytics.",
-    tags: ["Next.js", "PostgreSQL", "Stripe"],
+    tags: ["Next.js", "TypeScript", "PostgreSQL"],
+    href: "https://gitbarn.bahnstar.com",
+  },
+  {
+    title: "PetitionU",
+    description:
+      "A petition management platform for university students, professors, and administartors to manage petitions and track their progress.",
+    tags: ["React", "Elixir", "Phoenix", "PostgreSQL"],
     href: "#",
   },
   {
-    title: "Task Management App",
-    description:
-      "Collaborative task management tool with real-time updates, team workspaces, and advanced filtering.",
-    tags: ["React", "Node.js", "WebSocket"],
-    href: "#",
-  },
-  {
-    title: "Design System",
-    description:
-      "Comprehensive component library and design tokens for building consistent user interfaces at scale.",
-    tags: ["React", "Storybook", "Tailwind"],
+    title: "sLox",
+    description: "Lox language interpreter written in Scala.",
+    tags: ["Scala"],
     href: "#",
   },
 ];
@@ -41,7 +40,12 @@ export function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <Link key={project.title} href={project.href} className="group">
+          <Link
+            key={project.title}
+            href={project.href}
+            target="_blank"
+            className="group"
+          >
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <CardTitle className="flex items-start justify-between gap-2">
