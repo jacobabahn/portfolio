@@ -29,6 +29,12 @@ const projects = [
     tags: ["Scala"],
     href: "https://github.com/jacobabahn/sLox",
   },
+  {
+    title: "Page Replacement Simulator",
+    description: "A tool for simulating page replacement algorithms.",
+    tags: ["React", "JavaScript"],
+    href: "",
+  },
 ];
 
 export function Projects() {
