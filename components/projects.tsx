@@ -21,13 +21,13 @@ const projects = [
     description:
       "A petition management platform for university students, professors, and administartors to manage petitions and track their progress.",
     tags: ["React", "Elixir", "Phoenix", "PostgreSQL"],
-    href: "#",
+    href: "https://github.com/bahnstar/petitionu",
   },
   {
     title: "sLox",
     description: "Lox language interpreter written in Scala.",
     tags: ["Scala"],
-    href: "#",
+    href: "https://github.com/jacobabahn/sLox",
   },
 ];
 

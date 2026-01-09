@@ -22,20 +22,6 @@ const publications = [
   },
 ];
 
-// const publications = [
-//   {
-//     title:
-//       "Machine Learning Classification of Fossilized Pectinodon bakkeri Teeth",
-//     journal: "Machine Learning and Knowledge Extraction Journal",
-//     year: "2025",
-//     type: "Masters Thesis Publication",
-//     abstract:
-//       "A deep learning approach to automate the classification and identification of microfossil dinosarur teeth",
-//     href: "https://doi.org/10.3390/make7020045",
-//     tags: ["Python", "Tensorflow", "PCA"],
-//   },
-// ];
-
 export function Research() {
   return (
     <section id="research" className="mb-24">

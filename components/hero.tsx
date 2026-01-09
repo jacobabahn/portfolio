@@ -56,7 +56,7 @@ export function Hero() {
             <SiLinkedin className="h-6 w-6" />
           </a>
           <a
-            href="https://github.com/jacobbahn"
+            href="https://github.com/jacobabahn"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-border bg-muted/50 p-3 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"

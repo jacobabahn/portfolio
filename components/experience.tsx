@@ -14,7 +14,7 @@ const experiences: ExperienceItem[] = [
     role: "Software Engineer II",
     period: "2025 - Present",
     description:
-      "Leading development of scalable web applications using Next.js and Node.js. Architected microservices infrastructure and implemented CI/CD pipelines that reduced deployment time by 60%.",
+      "Building full-stack features for critical power grid management systems",
     technologies: [
       "React.js",
       "TypeScript",
@@ -29,24 +29,15 @@ const experiences: ExperienceItem[] = [
     role: "Software Engineer",
     period: "2021 - 2024",
     description:
-      "Built responsive web applications for enterprise clients. Collaborated with designers and product managers to deliver pixel-perfect implementations with optimal performance.",
+      "Developed real-time applications for monitoring 1,000+ power generation assets",
     technologies: ["React", "C#", "MSSQL"],
   },
-  // {
-  //   company: "Freelance",
-  //   role: "Web Developer",
-  //   period: "2019 - 2021",
-  //   description:
-  //     "Developed custom web solutions for small businesses and startups. Managed full project lifecycle from requirements gathering to deployment and maintenance.",
-  //   technologies: ["JavaScript", "React", "Express", "MySQL"],
-  // },
 ];
 
 export function Experience() {
   return (
     <section className="mb-24">
       <div className="mb-12 flex items-center gap-3">
-        {/* <Briefcase className="h-6 w-6 text-muted-foreground" /> */}
         <h2 className="text-3xl font-bold tracking-tight">Experience</h2>
       </div>
 
