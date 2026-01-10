@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 // import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const _inter = Inter({ subsets: ["latin"] });
 const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -37,9 +38,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
         {/* <Analytics /> */}
       </body>
     </html>

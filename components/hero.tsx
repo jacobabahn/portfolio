@@ -13,6 +13,7 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { MapPin } from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Hero() {
   const baseClasses =
@@ -46,6 +47,7 @@ export function Hero() {
           </div>
         </div>
         <div className="gap-3 hidden md:flex">
+          <ThemeToggle />
           <a
             href="https://linkedin.com/in/jacobbahn"
             target="_blank"
