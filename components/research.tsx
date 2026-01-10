@@ -14,7 +14,7 @@ const publications = [
       "Machine Learning Classification of Fossilized Pectinodon bakkeri Teeth",
     journal: "Machine Learning and Knowledge Extraction Journal",
     year: "2025",
-    type: "Masters Thesis",
+    type: "Thesis",
     description:
       "A deep learning approach to automate the classification and identification of microfossil dinosarur teeth",
     tags: ["Python", "TensorFlow", "Computer Vision", "PCA", "K-Means"],
@@ -33,7 +33,7 @@ export function Research() {
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <div className="mb-1 flex items-center gap-2">
-                  <span className="rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+                  <span className="rounded-md bg-primary/10 px-2 py-1 text-xs font-medium text-primary">
                     {pub.type}
                   </span>
                   <span className="text-xs text-muted-foreground">
@@ -41,7 +41,7 @@ export function Research() {
                   </span>
                 </div>
                 <CardTitle className="flex items-start justify-between gap-2">
-                  <span className="text-balance">{pub.title}</span>
+                  <span className="text-balance leading-6">{pub.title}</span>
                   <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </CardTitle>
                 <CardDescription className="text-pretty leading-relaxed">
