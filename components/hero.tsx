@@ -69,7 +69,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="space-y-4 flex flex-col text-center">
+      <div className="space-y-4 flex flex-col text-center md:text-left">
         <p className="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
           Building elegant, performant web applications with modern
           technologies. I strive to create seamless experiences that bridge
