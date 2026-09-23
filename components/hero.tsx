@@ -2,7 +2,6 @@ import Image from "next/image";
 import {
   SiTypescript,
   SiReact,
-  SiNodedotjs,
   SiPython,
   SiPostgresql,
   SiDocker,
@@ -46,13 +45,14 @@ export function Hero() {
             </p>
           </div>
         </div>
-        <div className="gap-3 hidden md:flex">
+        <div className="flex shrink-0 justify-center gap-3">
           <ThemeToggle />
           <a
             href="https://linkedin.com/in/jacobbahn"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-border bg-muted/50 p-3 text-muted-foreground transition-colors hover:bg-muted hover:text-[#0A66C2]"
+            aria-label="LinkedIn"
             title="LinkedIn"
           >
             <SiLinkedin className="h-6 w-6" />
@@ -62,6 +62,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-border bg-muted/50 p-3 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            aria-label="GitHub"
             title="GitHub"
           >
             <SiGithub className="h-6 w-6" />
@@ -70,13 +71,12 @@ export function Hero() {
       </div>
 
       <div className="space-y-4 flex flex-col text-center md:text-left">
-        <p className="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-          Building elegant, performant web applications with modern
-          technologies. I strive to create seamless experiences that bridge
-          functional design with robust engineering.
+        <p className="text-pretty text-base leading-relaxed text-foreground/85 md:text-lg">
+          I build web applications with a focus on clear interfaces, reliable
+          systems, and performance.
         </p>
         <p className="text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
-          When I'm not working, you'll find me exploring new languages &
+          When I’m not working, you’ll find me exploring new languages &
           frameworks, debating about sports, or hanging out with my wife.
         </p>
       </div>

@@ -16,7 +16,7 @@ const publications = [
     year: "2025",
     type: "Thesis",
     description:
-      "A deep learning approach to automate the classification and identification of microfossil dinosarur teeth",
+      "A deep learning approach to automate the classification and identification of microfossil dinosaur teeth",
     tags: ["Python", "TensorFlow", "Computer Vision", "PCA", "K-Means"],
     href: "https://doi.org/10.3390/make7020045",
   },

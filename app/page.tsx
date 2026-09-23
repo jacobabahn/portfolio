@@ -1,7 +1,6 @@
 import { Hero } from "@/components/hero";
 import { Experience } from "@/components/experience";
 import { Projects } from "@/components/projects";
-import { Blog } from "@/components/blog";
 import { Research } from "@/components/research";
 
 export default function Page() {
@@ -12,7 +11,6 @@ export default function Page() {
         <Experience />
         <Research />
         <Projects />
-        <Blog />
       </main>
     </div>
   );
