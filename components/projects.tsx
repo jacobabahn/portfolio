@@ -10,30 +10,44 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: "JJ Evolved",
+    description:
+      "A keyboard-driven terminal interface for Jujutsu, with visual previews for editing revision history.",
+    tags: ["TypeScript", "Bun", "OpenTUI"],
+    href: "/projects/jj-evolved",
+  },
+  {
+    title: "AI Overview for SearXNG",
+    description:
+      "Streaming AI summaries with source citations for SearXNG, using local models or hosted providers.",
+    tags: ["Python", "JavaScript", "SearXNG"],
+    href: "/projects/ai-overview-searxng",
+  },
+  {
     title: "GitBarn Web Portal",
     description:
-      "A full-stack e-commerce solution with payment processing, inventory management, and real-time analytics.",
+      "A customer portal for manure removal services, bringing orders, billing documents, and support together.",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "https://gitbarn.bahnstar.com",
+    href: "/projects/gitbarn-web",
   },
   {
     title: "PetitionU",
     description:
-      "A petition management platform for university students, professors, and administartors to manage petitions and track their progress.",
+      "A petition management platform for university students, professors, and administrators to manage petitions and track their progress.",
     tags: ["React", "Elixir", "Phoenix", "PostgreSQL"],
-    href: "https://github.com/bahnstar/petitionu",
+    href: "/projects/petitionu",
   },
   {
     title: "sLox",
     description: "Lox language interpreter written in Scala.",
     tags: ["Scala"],
-    href: "https://github.com/jacobabahn/sLox",
+    href: "/projects/slox",
   },
   {
     title: "Page Replacement Simulator",
-    description: "A tool for simulating page replacement algorithms.",
+    description: "An interactive view of FIFO, LIFO, and LRU page replacement, with cache states and hit/miss statistics.",
     tags: ["React", "JavaScript"],
-    href: "",
+    href: "/projects/page-replacement-simulator",
   },
 ];
 
@@ -49,8 +63,7 @@ export function Projects() {
           <Link
             key={project.title}
             href={project.href}
-            target="_blank"
-            className="group"
+            className="group rounded-xl"
           >
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
