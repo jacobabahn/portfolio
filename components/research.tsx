@@ -16,9 +16,9 @@ const publications = [
     year: "2025",
     type: "Thesis",
     description:
-      "A deep learning approach to automate the classification and identification of microfossil dinosaur teeth",
-    tags: ["Python", "TensorFlow", "Computer Vision", "PCA", "K-Means"],
-    href: "https://doi.org/10.3390/make7020045",
+      "Using tooth measurements to group fossil specimens and train an image classifier for Pectinodon bakkeri teeth.",
+    tags: ["Python", "R", "Keras", "PCA", "K-Means"],
+    href: "/research/fossil-teeth",
   },
 ];
 
@@ -29,7 +29,7 @@ export function Research() {
 
       <div>
         {publications.map((pub) => (
-          <Link key={pub.title} href={pub.href} className="group">
+          <Link key={pub.title} href={pub.href} className="group block rounded-xl">
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <div className="mb-1 flex items-center gap-2">

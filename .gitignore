@@ -3,6 +3,7 @@
 # assets
 /public/*
 !/public/projects/
+!/public/research/
 
 # dependencies
 /node_modules
