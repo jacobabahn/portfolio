@@ -15,9 +15,9 @@ export default function JJEvolvedPage() {
       repository="https://github.com/jacobabahn/jj-evolved"
       screenshot={{
         src: "/projects/jj-evolved-rebase.webp",
-        width: 2226,
-        height: 1210,
-        alt: "JJ Evolved comparing a proposed rebase on the left with the current revision tree on the right. Two login changes move together onto main.",
+        width: 2312,
+        height: 1362,
+        alt: "JJ Evolved comparing the current revision tree on the left with a proposed rebase on the right. Two login changes move together onto main.",
         caption: "A rebase preview captured from the app’s renderer using an example repository.",
       }}
     >
