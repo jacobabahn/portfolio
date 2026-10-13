@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Star } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { formatStars, getStars, repoFromUrl } from "@/lib/github";
 
 type ProjectDetailProps = {
   title: string;
@@ -19,7 +20,7 @@ type ProjectDetailProps = {
   children: ReactNode;
 };
 
-export function ProjectDetail({
+export async function ProjectDetail({
   title,
   description,
   technologies,
@@ -27,6 +28,8 @@ export function ProjectDetail({
   screenshot,
   children,
 }: ProjectDetailProps) {
+  const stars = await getStars(repoFromUrl(repository));
+
   return (
     <main className="mx-auto min-h-screen max-w-4xl px-6 py-12 md:py-20">
       <nav aria-label="Project navigation" className="mb-12 flex items-center justify-between gap-6">
@@ -44,10 +47,16 @@ export function ProjectDetail({
           <ul aria-label="Technologies" className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
             {technologies.map((technology) => <li key={technology}>{technology}</li>)}
           </ul>
-          <a href={repository} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-sm text-sm font-medium underline underline-offset-4 hover:text-secondary">
-            View on GitHub
-            <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
-          </a>
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <a href={repository} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-sm font-medium underline underline-offset-4 hover:text-secondary">
+              View on GitHub
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+            </a>
+            {stars ? <a href={`${repository}/stargazers`} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1.5 rounded-sm tabular-nums text-muted-foreground hover:text-foreground">
+              <Star aria-hidden="true" className="h-4 w-4 fill-transparent text-secondary transition-[fill,rotate] duration-300 group-hover:fill-current motion-safe:group-hover:rotate-[72deg]" />
+              {formatStars(stars)} {stars === 1 ? "star" : "stars"}
+            </a> : null}
+          </div>
         </header>
 
         {screenshot && <figure className="mb-12">
