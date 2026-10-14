@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "Page Replacement Simulator | Jacob Bahn",
+  title: "Page Replacement Simulator",
   description: "Explore FIFO, LIFO, and LRU page replacement through a step-by-step cache history and hit/miss statistics.",
 };
 

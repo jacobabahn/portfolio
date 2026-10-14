@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 // import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteUrl } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -12,9 +13,21 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jacob Bahn — Fullstack Engineer",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Jacob Bahn — Fullstack Engineer",
+    template: "%s | Jacob Bahn",
+  },
   description:
     "Projects, research, and experience of Jacob Bahn, a fullstack engineer building clear interfaces and reliable systems",
+  openGraph: {
+    type: "website",
+    siteName: "Jacob Bahn",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

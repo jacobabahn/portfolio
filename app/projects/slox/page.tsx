@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "sLox | Jacob Bahn",
+  title: "sLox",
   description: "A Scala implementation of the Lox interpreter, exploring scanning, parsing, and evaluating a programming language.",
 };
 

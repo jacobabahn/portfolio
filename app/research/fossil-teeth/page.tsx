@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const publication = "https://doi.org/10.3390/make7020045";
 
 export const metadata: Metadata = {
-  title: "Classifying fossil teeth with machine learning | Jacob Bahn",
+  title: "Classifying fossil teeth with machine learning",
   description:
     "My master’s thesis research on grouping fossil tooth measurements and training an image classifier for Pectinodon bakkeri teeth.",
 };

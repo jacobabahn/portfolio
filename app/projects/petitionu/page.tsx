@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "PetitionU | Jacob Bahn",
+  title: "PetitionU",
   description: "A platform for students to propose campus changes, gather signatures, and organize support with classmates.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "GitBarn Web Portal | Jacob Bahn",
+  title: "GitBarn Web Portal",
   description: "A customer portal for manure removal services, with orders, billing documents, and support in one place.",
 };
 

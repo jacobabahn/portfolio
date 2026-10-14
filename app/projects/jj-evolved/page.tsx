@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "JJ Evolved | Jacob Bahn",
+  title: "JJ Evolved",
   description: "A keyboard-driven terminal interface for Jujutsu, with visual previews for editing revision history.",
 };
 

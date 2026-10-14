@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectDetail } from "@/components/project-detail";
 
 export const metadata: Metadata = {
-  title: "AI Overview for SearXNG | Jacob Bahn",
+  title: "AI Overview for SearXNG",
   description: "Streaming AI summaries with source citations for SearXNG, using local models or hosted providers.",
 };
 
