@@ -12,14 +12,15 @@ const experiences: ExperienceItem[] = [
   {
     company: "V.Two",
     role: "Software Engineer",
-    period: "2026 - Present",
-    description: "Building software as part of the V.Two engineering team",
-    technologies: [],
+    period: "Nov 2026 - Present",
+    description:
+      "Building Go and Kubernetes backend services to migrate a healthcare platform off Apache Camel",
+    technologies: ["Go", "Kubernetes"],
   },
   {
     company: "Schweitzer Engineering Labs",
     role: "Software Engineer II",
-    period: "2025 - 2026",
+    period: "Jan 2025 - Oct 2026",
     description:
       "Building full-stack features for critical power grid management systems",
     technologies: [
@@ -34,7 +35,7 @@ const experiences: ExperienceItem[] = [
   {
     company: "Tennessee Valley Authority",
     role: "Software Engineer",
-    period: "2021 - 2024",
+    period: "Oct 2021 - Dec 2024",
     description:
       "Developed real-time applications for monitoring 1,000+ power generation assets",
     technologies: ["React", "C#", "MSSQL"],
