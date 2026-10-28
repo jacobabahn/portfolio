@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function JJEvolvedPage() {
   return (
     <ProjectDetail
+      slug="jj-evolved"
       title="JJ Evolved"
       description="A terminal interface for Jujutsu that makes changes to revision history visible before you apply them."
       technologies={["TypeScript", "Bun", "OpenTUI"]}

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function SLoxPage() {
   return (
     <ProjectDetail
+      slug="slox"
       title="sLox"
       description="A Lox interpreter written in Scala, exploring how source code becomes a running program."
       technologies={["Scala", "sbt"]}

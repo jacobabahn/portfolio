@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function AIOverviewPage() {
   return (
     <ProjectDetail
+      slug="ai-overview-searxng"
       title="AI Overview for SearXNG"
       description="Source-linked AI summaries alongside your search results, with a choice of local models or hosted providers."
       technologies={["Python", "JavaScript", "SearXNG"]}

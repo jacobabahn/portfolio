@@ -8,6 +8,7 @@ import {
 import { ArrowUpRight, Star } from "lucide-react";
 import Link from "next/link";
 import { formatStars, getStars } from "@/lib/github";
+import { SharedTitle } from "@/components/page-transition";
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     description:
       "Streaming AI summaries with source citations for SearXNG, using local models or hosted providers.",
     tags: ["Python", "JavaScript", "SearXNG"],
-    href: "/projects/ai-overview-searxng",
+    slug: "ai-overview-searxng",
     repo: "jacobabahn/ai-overview-searxng",
   },
   {
@@ -23,7 +24,7 @@ const projects = [
     description:
       "A keyboard-driven terminal interface for Jujutsu, with visual previews for editing revision history.",
     tags: ["TypeScript", "Bun", "OpenTUI"],
-    href: "/projects/jj-evolved",
+    slug: "jj-evolved",
     repo: "jacobabahn/jj-evolved",
   },
   {
@@ -31,7 +32,7 @@ const projects = [
     description:
       "A customer portal for manure removal services, bringing orders, billing documents, and support together.",
     tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "/projects/gitbarn-web",
+    slug: "gitbarn-web",
     repo: "Bahnstar/gitbarn-web",
   },
   {
@@ -39,21 +40,21 @@ const projects = [
     description:
       "A petition management platform for university students, professors, and administrators to manage petitions and track their progress.",
     tags: ["React", "Elixir", "Phoenix", "PostgreSQL"],
-    href: "/projects/petitionu",
+    slug: "petitionu",
     repo: "bahnstar/petitionu",
   },
   {
     title: "sLox",
     description: "Lox language interpreter written in Scala.",
     tags: ["Scala"],
-    href: "/projects/slox",
+    slug: "slox",
     repo: "jacobabahn/sLox",
   },
   {
     title: "Page Replacement Simulator",
     description: "An interactive view of FIFO, LIFO, and LRU page replacement, with cache states and hit/miss statistics.",
     tags: ["React", "JavaScript"],
-    href: "/projects/page-replacement-simulator",
+    slug: "page-replacement-simulator",
     repo: "jacobabahn/PageReplacementSimulator",
   },
 ];
@@ -84,14 +85,17 @@ export async function Projects() {
         {projects.map((project, index) => (
           <Link
             key={project.title}
-            href={project.href}
+            href={`/projects/${project.slug}`}
+            transitionTypes={["nav-forward"]}
             className="group rounded-xl"
           >
             <Card className="relative h-full transition-colors hover:bg-muted/50">
               {stars[index] ? <StarCount stars={stars[index]} /> : null}
               <CardHeader>
                 <CardTitle className="flex items-start justify-between gap-2">
-                  <span className="text-balance">{project.title}</span>
+                  <SharedTitle id={project.slug}>
+                    <span className="text-balance">{project.title}</span>
+                  </SharedTitle>
                   <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </CardTitle>
                 <CardDescription className="text-pretty leading-relaxed">

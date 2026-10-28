@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { SharedTitle } from "@/components/page-transition";
 
 const publications = [
   {
@@ -18,7 +19,7 @@ const publications = [
     description:
       "Using tooth measurements to group fossil specimens and train an image classifier for Pectinodon bakkeri teeth.",
     tags: ["Python", "R", "Keras", "PCA", "K-Means"],
-    href: "/research/fossil-teeth",
+    slug: "fossil-teeth",
   },
 ];
 
@@ -29,7 +30,7 @@ export function Research() {
 
       <div>
         {publications.map((pub) => (
-          <Link key={pub.title} href={pub.href} className="group block rounded-xl">
+          <Link key={pub.title} href={`/research/${pub.slug}`} transitionTypes={["nav-forward"]} className="group block rounded-xl">
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <div className="mb-1 flex items-center gap-2">
@@ -41,7 +42,9 @@ export function Research() {
                   </span>
                 </div>
                 <CardTitle className="flex items-start justify-between gap-2">
-                  <span className="text-balance leading-6">{pub.title}</span>
+                  <SharedTitle id={pub.slug}>
+                    <span className="text-balance leading-6">{pub.title}</span>
+                  </SharedTitle>
                   <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </CardTitle>
                 <CardDescription className="text-pretty leading-relaxed">

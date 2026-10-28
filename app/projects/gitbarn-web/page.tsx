@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function GitBarnPage() {
   return (
     <ProjectDetail
+      slug="gitbarn-web"
       title="GitBarn Web Portal"
       description="A customer portal for a South Florida manure-removal business, bringing orders, billing documents, and support into one place."
       technologies={["Next.js", "TypeScript", "Supabase", "PostgreSQL"]}

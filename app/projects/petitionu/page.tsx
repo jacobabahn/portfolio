@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function PetitionUPage() {
   return (
     <ProjectDetail
+      slug="petitionu"
       title="PetitionU"
       description="A place for students to propose changes at their school and bring classmates together around them."
       technologies={["React", "TypeScript", "Elixir", "Phoenix", "PostgreSQL"]}

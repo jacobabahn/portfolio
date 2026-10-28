@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function PageReplacementPage() {
   return (
     <ProjectDetail
+      slug="page-replacement-simulator"
       title="Page Replacement Simulator"
       description="A visual way to explore how page replacement policies change the contents of a fixed-size cache."
       technologies={["React", "JavaScript", "Material UI"]}

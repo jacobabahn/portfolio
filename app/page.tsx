@@ -2,16 +2,19 @@ import { Hero } from "@/components/hero";
 import { Experience } from "@/components/experience";
 import { Projects } from "@/components/projects";
 import { Research } from "@/components/research";
+import { PageTransition } from "@/components/page-transition";
 
 export default function Page() {
   return (
-    <div className="min-h-screen">
-      <main className="mx-auto max-w-4xl px-6 py-16 md:py-24">
-        <Hero />
-        <Experience />
-        <Research />
-        <Projects />
-      </main>
-    </div>
+    <PageTransition>
+      <div className="min-h-screen">
+        <main className="mx-auto max-w-4xl px-6 py-16 md:py-24">
+          <Hero />
+          <Experience />
+          <Research />
+          <Projects />
+        </main>
+      </div>
+    </PageTransition>
   );
 }
