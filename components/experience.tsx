@@ -22,7 +22,7 @@ const experiences: ExperienceItem[] = [
     role: "Software Engineer II",
     period: "Jan 2025 - Oct 2026",
     description:
-      "Building full-stack features for critical power grid management systems",
+      "Built full-stack features for critical power grid management systems",
     technologies: [
       "React.js",
       "TypeScript",
