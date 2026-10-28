@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { PageTransition, SharedTitle } from "@/components/page-transition";
+import { PageTransition } from "@/components/page-transition";
 
 const publication = "https://doi.org/10.3390/make7020045";
 
@@ -38,7 +38,7 @@ export default function FossilTeethPage() {
     <PageTransition>
       <main className="mx-auto min-h-screen max-w-4xl px-6 py-12 md:py-20">
         <nav aria-label="Research navigation" className="mb-12 flex items-center justify-between gap-6">
-          <Link href="/#research" transitionTypes={["nav-back"]} className="inline-flex items-center gap-2 rounded-sm text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/#research-fossil-teeth" transitionTypes={["nav-back"]} className="inline-flex items-center gap-2 rounded-sm text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             Back to research
           </Link>
@@ -46,9 +46,7 @@ export default function FossilTeethPage() {
         </nav>
         <article className="max-w-2xl">
           <header className="mb-10">
-            <SharedTitle id="fossil-teeth">
-              <h1 className="mb-5 w-fit text-balance text-4xl font-bold tracking-tight md:text-5xl">Classifying fossil teeth with machine learning</h1>
-            </SharedTitle>
+            <h1 className="mb-5 text-balance text-4xl font-bold tracking-tight md:text-5xl">Classifying fossil teeth with machine learning</h1>
             <p className="text-pretty text-lg leading-relaxed text-foreground/85">
               My master’s thesis explored how measurements and microscope images
               can help make sense of tiny dinosaur teeth. This page summarizes

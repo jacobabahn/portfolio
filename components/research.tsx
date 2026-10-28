@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { SharedTitle } from "@/components/page-transition";
 
 const publications = [
   {
@@ -30,7 +29,13 @@ export function Research() {
 
       <div>
         {publications.map((pub) => (
-          <Link key={pub.title} href={`/research/${pub.slug}`} transitionTypes={["nav-forward"]} className="group block rounded-xl">
+          <Link
+            key={pub.title}
+            id={`research-${pub.slug}`}
+            href={`/research/${pub.slug}`}
+            transitionTypes={["nav-forward"]}
+            className="group block scroll-mt-16 rounded-xl md:scroll-mt-24"
+          >
             <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <div className="mb-1 flex items-center gap-2">
@@ -42,9 +47,7 @@ export function Research() {
                   </span>
                 </div>
                 <CardTitle className="flex items-start justify-between gap-2">
-                  <SharedTitle id={pub.slug}>
-                    <span className="text-balance leading-6">{pub.title}</span>
-                  </SharedTitle>
+                  <span className="text-balance leading-6">{pub.title}</span>
                   <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </CardTitle>
                 <CardDescription className="text-pretty leading-relaxed">

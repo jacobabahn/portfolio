@@ -37,7 +37,7 @@ export async function ProjectDetail({
     <PageTransition>
       <main className="mx-auto min-h-screen max-w-4xl px-6 py-12 md:py-20">
         <nav aria-label="Project navigation" className="mb-12 flex items-center justify-between gap-6">
-          <Link href="/#projects" transitionTypes={["nav-back"]} className="inline-flex items-center gap-2 rounded-sm text-sm text-muted-foreground hover:text-foreground">
+          <Link href={`/#project-${slug}`} transitionTypes={["nav-back"]} className="inline-flex items-center gap-2 rounded-sm text-sm text-muted-foreground hover:text-foreground">
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             All projects
           </Link>

@@ -85,9 +85,10 @@ export async function Projects() {
         {projects.map((project, index) => (
           <Link
             key={project.title}
+            id={`project-${project.slug}`}
             href={`/projects/${project.slug}`}
             transitionTypes={["nav-forward"]}
-            className="group rounded-xl"
+            className="group scroll-mt-16 rounded-xl md:scroll-mt-24"
           >
             <Card className="relative h-full transition-colors hover:bg-muted/50">
               {stars[index] ? <StarCount stars={stars[index]} /> : null}

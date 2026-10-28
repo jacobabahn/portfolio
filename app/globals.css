@@ -142,56 +142,60 @@
   }
 }
 
-/* View transitions: card titles morph into page headings, and pages slide
-   forward into a project or back to the list. */
+/* View transitions: a card title morphs into its page heading while the
+   page slides forward, and back again on the return link. Only the morph
+   blurs; blurring whole-page snapshots is costly and reads as murky. */
 ::view-transition {
   pointer-events: none;
 }
 
 ::view-transition-group(.morph) {
   animation-duration: 400ms;
+  animation-timing-function: ease-in-out;
+  /* Keep the title above the sliding pages. The browser appends groups that
+     only exist on the incoming page last, so without this the incoming page
+     paints over the title on the way back. */
+  z-index: 1;
 }
 ::view-transition-image-pair(.morph) {
-  animation-name: via-blur;
+  animation-name: vt-via-blur;
 }
 
-::view-transition-old(.nav-forward) {
-  --slide-offset: -60px;
+::view-transition-old(.nav-forward),
+::view-transition-old(.nav-back) {
   animation:
     150ms ease-in both vt-fade reverse,
     400ms ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-forward),
+::view-transition-new(.nav-back) {
+  animation:
+    240ms ease-out 60ms both vt-fade,
+    400ms ease-in-out both vt-slide;
+}
+::view-transition-old(.nav-forward) {
+  --slide-offset: -60px;
 }
 ::view-transition-new(.nav-forward) {
   --slide-offset: 60px;
-  animation:
-    210ms ease-out 150ms both vt-fade,
-    400ms ease-in-out both vt-slide;
 }
 ::view-transition-old(.nav-back) {
   --slide-offset: 60px;
-  animation:
-    150ms ease-in both vt-fade reverse,
-    400ms ease-in-out both vt-slide reverse;
 }
 ::view-transition-new(.nav-back) {
   --slide-offset: -60px;
-  animation:
-    210ms ease-out 150ms both vt-fade,
-    400ms ease-in-out both vt-slide;
 }
 
-@keyframes via-blur {
+@keyframes vt-via-blur {
   30% {
     filter: blur(3px);
   }
 }
 @keyframes vt-fade {
   from {
-    filter: blur(3px);
     opacity: 0;
   }
   to {
-    filter: blur(0);
     opacity: 1;
   }
 }
