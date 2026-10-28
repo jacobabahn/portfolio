@@ -11,7 +11,7 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     company: "V.Two",
-    role: "Software Engineer",
+    role: "Senior Software Engineer",
     period: "Nov 2026 - Present",
     description:
       "Building Go and Kubernetes backend services to migrate a healthcare platform off Apache Camel",
@@ -19,7 +19,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     company: "Schweitzer Engineering Labs",
-    role: "Software Engineer II",
+    role: "Software Engineer",
     period: "Jan 2025 - Oct 2026",
     description:
       "Built full-stack features for critical power grid management systems",
