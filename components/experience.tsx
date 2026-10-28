@@ -10,9 +10,16 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    company: "V.Two",
+    role: "Software Engineer",
+    period: "2026 - Present",
+    description: "Building software as part of the V.Two engineering team",
+    technologies: [],
+  },
+  {
     company: "Schweitzer Engineering Labs",
     role: "Software Engineer II",
-    period: "2025 - Present",
+    period: "2025 - 2026",
     description:
       "Building full-stack features for critical power grid management systems",
     technologies: [
