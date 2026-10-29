@@ -27,10 +27,10 @@ export function Hero() {
           Jacob Bahn
         </h1>
         <div className="col-span-2 mt-6 max-w-[60ch] md:col-span-1 md:row-start-2">
-          <p className="text-pretty text-lg leading-relaxed text-foreground md:text-xl">
-            I&apos;m a senior engineer at V.Two, where I write backend services
+          <p className="text-pretty text-lg leading-relaxed text-foreground md:text-balance md:text-xl">
+            I&apos;m a senior engineer at V.Two, where I&nbsp;write backend services
             for a healthcare platform. Before that, I spent five years
-            developing software for the power grid at TVA and SEL.
+            developing software for the power grid.
           </p>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground md:text-lg">
             Off the clock I&apos;m trying new programming languages, debating
