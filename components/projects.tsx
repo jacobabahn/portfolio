@@ -61,7 +61,7 @@ const projects = [
 
 function StarCount({ stars }: { stars: number }) {
   return (
-    <span className="absolute -top-3 right-5 inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-2.5 py-1 text-xs font-medium tabular-nums">
+    <span className="inline-flex shrink-0 items-center gap-1 pb-1 text-xs tabular-nums text-muted-foreground">
       <Star
         aria-hidden="true"
         className="h-3.5 w-3.5 fill-transparent text-secondary transition-[fill,rotate] duration-300 group-hover:fill-current motion-safe:group-hover:rotate-[72deg]"
@@ -90,8 +90,7 @@ export async function Projects() {
             transitionTypes={["nav-forward"]}
             className="group scroll-mt-16 rounded-xl md:scroll-mt-24"
           >
-            <Card className="relative h-full transition-colors hover:bg-muted/50">
-              {stars[index] ? <StarCount stars={stars[index]} /> : null}
+            <Card className="h-full transition-colors hover:bg-muted/50">
               <CardHeader>
                 <CardTitle className="flex items-start justify-between gap-2">
                   <SharedTitle id={project.slug}>
@@ -103,7 +102,7 @@ export async function Projects() {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex items-end justify-between gap-4">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -114,6 +113,7 @@ export async function Projects() {
                     </span>
                   ))}
                 </div>
+                {stars[index] ? <StarCount stars={stars[index]} /> : null}
               </CardContent>
             </Card>
           </Link>
