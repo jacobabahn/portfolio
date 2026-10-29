@@ -13,12 +13,13 @@ export function Hero() {
       <div className="grid grid-cols-[72px_1fr] items-center gap-x-4 md:grid-cols-[1fr_176px] md:items-start md:gap-x-12">
         <div className="relative col-start-1 row-start-1 aspect-[4/5] w-[72px] overflow-hidden rounded-lg ring-1 ring-border md:col-start-2 md:row-span-2 md:w-44 md:rounded-xl">
           <Image
-            src="https://i.imgur.com/B9EDe7T.jpeg"
+            src="/home/portrait.webp"
             alt="Jacob Bahn"
             fill
-            sizes="(min-width: 768px) 176px, 72px"
-            // The source is a full-body shot; zoom toward the face.
-            className="origin-[50%_28%] scale-[1.6] object-cover object-[50%_30%] md:origin-[50%_30%] md:scale-[1.35]"
+            // Phones zoom in a little further on the face; sizes covers the zoom
+            // so the served file stays sharp.
+            sizes="(min-width: 768px) 176px, 86px"
+            className="origin-[50%_24%] scale-[1.18] object-cover md:scale-100"
             priority
           />
         </div>
@@ -32,8 +33,8 @@ export function Hero() {
             software for the power grid at TVA and SEL.
           </p>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground md:text-lg">
-            Off the clock I&apos;m trying new languages, debating sports, or
-            hanging out with my wife.
+            Off the clock I&apos;m trying new programming languages, debating
+            sports, or hanging out with my wife.
           </p>
         </div>
       </div>

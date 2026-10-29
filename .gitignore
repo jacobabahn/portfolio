@@ -4,6 +4,7 @@
 /public/*
 !/public/projects/
 !/public/research/
+!/public/home/
 
 # dependencies
 /node_modules
