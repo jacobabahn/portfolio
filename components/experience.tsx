@@ -48,6 +48,15 @@ const experiences: ExperienceItem[] = [
       "Developed real-time applications for monitoring 1,000+ power generation assets",
     technologies: ["React", "C#", "MSSQL"],
   },
+  {
+    company: "CIRC",
+    role: "Software Engineer Intern",
+    start: "2020-10",
+    end: "2021-10",
+    description:
+      "Wrote PHP features and test automation for a client web platform",
+    technologies: ["PHP", "Yii 2", "Selenium"],
+  },
 ];
 
 const MONTHS = [
