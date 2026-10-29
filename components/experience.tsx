@@ -20,7 +20,7 @@ const experiences: ExperienceItem[] = [
     role: "Senior Software Engineer",
     start: "2026-11",
     description:
-      "Building Go and Kubernetes backend services to migrate a healthcare platform off Apache Camel",
+      "Building Go backend services on Kubernetes for a healthcare platform",
     technologies: ["Go", "Kubernetes"],
   },
   {
@@ -29,7 +29,7 @@ const experiences: ExperienceItem[] = [
     start: "2025-01",
     end: "2026-10",
     description:
-      "Built full-stack features for critical power grid management systems",
+      "Shipped full-stack features for critical power grid management systems",
     technologies: [
       "React",
       "TypeScript",
@@ -110,7 +110,7 @@ export function Experience() {
   const columns = segments.map((s) => `minmax(2.5rem, ${s.months}fr)`).join(" ");
 
   return (
-    <section className="mb-24">
+    <section id="experience" className="mb-24">
       <h2 className="mb-10 text-3xl font-bold tracking-tight">Experience</h2>
 
       <div aria-hidden="true" className="mb-9">
