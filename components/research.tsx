@@ -43,7 +43,7 @@ export function Research() {
                     {pub.type}
                   </span>
                   <span className="text-xs text-muted-foreground">
-                    {pub.journal} · {pub.year}
+                    <span className="text-accent-secondary">{pub.journal}</span> · {pub.year}
                   </span>
                 </div>
                 <CardTitle className="flex items-start justify-between gap-2">

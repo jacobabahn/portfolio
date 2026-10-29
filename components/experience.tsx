@@ -168,7 +168,7 @@ export function Experience() {
               <h3 className="text-xl font-semibold leading-tight tracking-tight">
                 {exp.role}
               </h3>
-              <div className="mt-1 text-accent">{exp.company}</div>
+              <div className="mt-1 text-accent-secondary">{exp.company}</div>
               <p className="mt-3 max-w-[62ch] text-pretty leading-relaxed text-muted-foreground">
                 {exp.description}
               </p>

@@ -37,7 +37,7 @@ export function Hero() {
             </h1>
             <p className="flex flex-wrap items-center gap-2 text-base text-muted-foreground md:gap-4 md:text-2xl">
               <span className="flex items-center gap-1 md:gap-2">
-                <MapPin className="h-4 w-4 text-red-900/65 md:h-6 md:w-6" />
+                <MapPin className="h-4 w-4 text-accent-secondary md:h-6 md:w-6" />
                 Seattle
               </span>
               <span>·</span>
