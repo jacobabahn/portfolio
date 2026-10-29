@@ -150,8 +150,9 @@ export function Experience() {
           <div
             key={exp.company}
             onMouseEnter={() => setActive(i)}
-            className={`relative -mx-5 grid grid-cols-1 gap-x-10 gap-y-3 border-t border-border px-5 py-7 last:border-b md:grid-cols-[184px_1fr] before:absolute before:inset-x-0 before:inset-y-1 before:-z-10 before:rounded-md before:bg-muted/45 before:opacity-0 before:transition-opacity before:duration-200 ${
-              active === i ? "before:opacity-100" : ""
+            // While a row is hovered the others recede, as the bar's segments do.
+            className={`grid grid-cols-1 gap-x-10 gap-y-3 border-t border-border py-7 last:border-b md:grid-cols-[184px_1fr] *:transition-opacity *:duration-200 ${
+              active !== null && active !== i ? "*:opacity-45" : ""
             }`}
           >
             <div className="text-[15px] leading-normal text-muted-foreground md:pt-0.5">
