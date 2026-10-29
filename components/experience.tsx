@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ExperienceItem {
   company: string;
@@ -95,8 +95,75 @@ function barColor(index: number, active: number | null) {
   return active === index ? HIGHLIGHT : RECEDED;
 }
 
-export function Experience() {
+/** How far down the viewport the first row has to rise before scrolling starts the sweep. */
+const SCROLL_LINE = 0.65;
+
+/**
+ * On desktop, steps through the rows as you scroll so the bar lights up.
+ * The sweep starts when the first row rises past a line low in the viewport
+ * (or as soon as you scroll, if it's already there) and ends when the bar
+ * reaches the top of the screen. Each row gets an equal share of that scroll,
+ * so the highlight paces the same on any screen height, and nothing is lit
+ * before the sweep or after the bar has gone.
+ */
+function useScrollActive(
+  barRef: React.RefObject<HTMLDivElement | null>,
+  rowRefs: React.RefObject<(HTMLDivElement | null)[]>,
+) {
   const [active, setActive] = useState<number | null>(null);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(hover: hover) and (pointer: fine)");
+    let frame = 0;
+
+    const update = () => {
+      frame = 0;
+      const bar = barRef.current;
+      const first = rowRefs.current[0];
+      if (!desktop.matches || !bar || !first) {
+        setActive(null);
+        return;
+      }
+      const y = window.scrollY;
+      const firstTop = first.getBoundingClientRect().top + y;
+      const start = Math.max(1, firstTop - window.innerHeight * SCROLL_LINE);
+      const end = bar.getBoundingClientRect().top + y;
+      if (y < start || y >= end) {
+        setActive(null);
+        return;
+      }
+      const rows = rowRefs.current.length;
+      setActive(Math.min(rows - 1, Math.floor(((y - start) / (end - start)) * rows)));
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    desktop.addEventListener("change", schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      desktop.removeEventListener("change", schedule);
+    };
+  }, [barRef, rowRefs]);
+
+  return active;
+}
+
+export function Experience() {
+  const [hovered, setHovered] = useState<number | null>(null);
+  const barRef = useRef<HTMLDivElement>(null);
+  const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const scrolled = useScrollActive(barRef, rowRefs);
+  // The pointer wins over scroll position.
+  const active = hovered ?? scrolled;
+  // A hovered row was chosen, so the rest step well back. A scrolled one was
+  // picked for the reader, who may still be reading another, so they only dim.
+  const recede = hovered !== null ? "*:opacity-45" : "*:opacity-70";
 
   const now = new Date();
   const nowMonths = now.getFullYear() * 12 + now.getMonth();
@@ -113,7 +180,7 @@ export function Experience() {
     <section id="experience" className="mb-24">
       <h2 className="mb-10 text-3xl font-bold tracking-tight">Experience</h2>
 
-      <div aria-hidden="true" className="mb-9">
+      <div ref={barRef} aria-hidden="true" className="mb-9">
         <div className="grid h-2 gap-[3px]" style={{ gridTemplateColumns: columns }}>
           {segments.map(({ exp, i }) => (
             <div
@@ -124,7 +191,7 @@ export function Experience() {
                 // Hatch the open-ended role.
                 backgroundImage: exp.end
                   ? undefined
-                  : "repeating-linear-gradient(90deg, transparent 0 4px, var(--background) 4px 7px)",
+                  : "repeating-linear-gradient(90deg, transparent 0 5px, var(--background) 5px 7px)",
               }}
             />
           ))}
@@ -145,14 +212,17 @@ export function Experience() {
         </div>
       </div>
 
-      <div onMouseLeave={() => setActive(null)}>
+      <div onMouseLeave={() => setHovered(null)}>
         {experiences.map((exp, i) => (
           <div
             key={exp.company}
-            onMouseEnter={() => setActive(i)}
-            // While a row is hovered the others recede, as the bar's segments do.
+            ref={(el) => {
+              rowRefs.current[i] = el;
+            }}
+            onMouseEnter={() => setHovered(i)}
+            // While a row is active the others recede, as the bar's segments do.
             className={`grid grid-cols-1 gap-x-10 gap-y-3 border-t border-border py-7 last:border-b md:grid-cols-[184px_1fr] *:transition-opacity *:duration-200 ${
-              active !== null && active !== i ? "*:opacity-45" : ""
+              active !== null && active !== i ? recede : ""
             }`}
           >
             <div className="text-[15px] leading-normal text-muted-foreground md:pt-0.5">
