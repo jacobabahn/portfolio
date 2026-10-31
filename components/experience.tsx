@@ -211,11 +211,9 @@ export function Experience() {
         >
           {segments.map(({ exp, months }, k) => (
             <span key={exp.company} className="flex justify-between">
-              {/* Hide a year label when its segment is too short to hold one. */}
-              <span className={months < 18 && k > 0 ? "invisible" : ""}>
-                {exp.start.slice(0, 4)}
-              </span>
-              {k === segments.length - 1 && <span>now</span>}
+              {/* Drop a year label when its segment is too short to hold one. */}
+              {(months >= 18 || k === 0) && <span>{exp.start.slice(0, 4)}</span>}
+              {k === segments.length - 1 && <span className="ml-auto">now</span>}
             </span>
           ))}
         </div>
