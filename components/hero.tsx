@@ -39,30 +39,32 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border pt-5 text-[15px]">
-        {/* Own line on phones so the two links wrap together. */}
-        <span className="flex w-full items-center gap-2 text-muted-foreground md:inline-flex md:w-auto">
+      <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-border pt-5 text-[15px] md:gap-x-6">
+        <span className="inline-flex items-center gap-2 text-muted-foreground">
           <MapPin aria-hidden="true" className="h-4 w-4 text-accent-secondary" />
-          Full-stack engineer in Seattle
+          Greater Seattle
         </span>
-        <a
-          href="https://github.com/jacobabahn"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={link}
-        >
-          <SiGithub aria-hidden="true" className="h-4 w-4" />
-          GitHub
-        </a>
-        <a
-          href="https://linkedin.com/in/jacobbahn"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={link}
-        >
-          <SiLinkedin aria-hidden="true" className="h-4 w-4" />
-          LinkedIn
-        </a>
+        {/* A pair, so they wrap together on the narrowest phones. */}
+        <div className="flex items-center gap-x-4 md:gap-x-6">
+          <a
+            href="https://github.com/jacobabahn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            <SiGithub aria-hidden="true" className="h-4 w-4" />
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/jacobbahn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            <SiLinkedin aria-hidden="true" className="h-4 w-4" />
+            LinkedIn
+          </a>
+        </div>
         <span className="w-full font-mono text-xs text-muted-foreground/70 md:ml-auto md:w-auto">
           TypeScript · Go · Postgres · Kubernetes
         </span>
