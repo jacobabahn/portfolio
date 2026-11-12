@@ -14,13 +14,6 @@ export default function JJEvolvedPage() {
       description="A terminal interface for Jujutsu that makes changes to revision history visible before you apply them."
       technologies={["TypeScript", "Bun", "OpenTUI"]}
       repository="https://github.com/jacobabahn/jj-evolved"
-      screenshot={{
-        src: "/projects/jj-evolved-rebase.webp",
-        width: 2312,
-        height: 1362,
-        alt: "JJ Evolved comparing the current revision tree on the left with a proposed rebase on the right. Two login changes move together onto main.",
-        caption: "A rebase preview captured from the app’s renderer using an example repository.",
-      }}
     >
       <section>
         <h2>See the change before making it</h2>

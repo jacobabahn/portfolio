@@ -14,13 +14,6 @@ export default function PetitionUPage() {
       description="A place for students to propose changes at their school and bring classmates together around them."
       technologies={["React", "TypeScript", "Elixir", "Phoenix", "PostgreSQL"]}
       repository="https://github.com/bahnstar/petitionu"
-      screenshot={{
-        src: "/projects/petitionu-dashboard.webp",
-        width: 1440,
-        height: 1387,
-        alt: "PetitionU dashboard for a sample student, with petitions started and signed, classroom membership, and prompts to create a first petition.",
-        caption: "The personal dashboard, shown with a sample student account.",
-      }}
     >
       <section>
         <h2>From an idea to a shared request</h2>

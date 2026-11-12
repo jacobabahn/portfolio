@@ -14,13 +14,6 @@ export default function PageReplacementPage() {
       description="A visual way to explore how page replacement policies change the contents of a fixed-size cache."
       technologies={["React", "JavaScript", "Material UI"]}
       repository="https://github.com/jacobabahn/PageReplacementSimulator"
-      screenshot={{
-        src: "/projects/page-replacement-simulator.webp",
-        width: 1440,
-        height: 900,
-        alt: "A FIFO simulation with a three-page cache, seven page requests, and a table showing each hit or miss and the resulting cache contents.",
-        caption: "A three-page FIFO cache processing the sequence 1, 2, 3, 1, 4, 2, 5.",
-      }}
     >
       <section>
         <h2>Follow each page request</h2>

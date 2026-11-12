@@ -14,13 +14,6 @@ export default function AIOverviewPage() {
       description="Source-linked AI summaries alongside your search results, with a choice of local models or hosted providers."
       technologies={["Python", "JavaScript", "SearXNG"]}
       repository="https://github.com/jacobabahn/ai-overview-searxng"
-      screenshot={{
-        src: "/projects/searxng-ai-summary.webp",
-        width: 1526,
-        height: 956,
-        alt: "An AI summary in SearXNG’s dark theme, with numbered citations, an expandable source list, and a Show full answer control.",
-        caption: "The summary panel in SearXNG’s Simple theme.",
-      }}
     >
       <section>
         <h2>An overview without leaving search</h2>

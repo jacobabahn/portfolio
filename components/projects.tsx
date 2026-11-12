@@ -6,11 +6,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ArrowUpRight, Star } from "lucide-react";
-import Link from "next/link";
+import { PreloadLink } from "@/components/preload-link";
 import { formatStars, getStars } from "@/lib/github";
 import { SharedTitle } from "@/components/page-transition";
+import { screenshotPreload, type ProjectSlug } from "@/lib/project-screenshots";
 
-const projects = [
+const projects: {
+  title: string;
+  description: string;
+  tags: string[];
+  slug: ProjectSlug;
+  repo: string;
+}[] = [
   {
     title: "AI Overview for SearXNG",
     description:
@@ -83,10 +90,11 @@ export async function Projects() {
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project, index) => (
-          <Link
+          <PreloadLink
             key={project.title}
             id={`project-${project.slug}`}
             href={`/projects/${project.slug}`}
+            image={screenshotPreload(project.slug)}
             transitionTypes={["nav-forward"]}
             className="group scroll-mt-16 rounded-xl md:scroll-mt-24"
           >
@@ -116,7 +124,7 @@ export async function Projects() {
                 {stars[index] ? <StarCount stars={stars[index]} /> : null}
               </CardContent>
             </Card>
-          </Link>
+          </PreloadLink>
         ))}
       </div>
     </section>

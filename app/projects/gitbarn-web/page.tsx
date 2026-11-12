@@ -14,13 +14,6 @@ export default function GitBarnPage() {
       description="A customer portal for a South Florida manure-removal business, bringing orders, billing documents, and support into one place."
       technologies={["Next.js", "TypeScript", "Supabase", "PostgreSQL"]}
       repository="https://github.com/Bahnstar/gitbarn-web"
-      screenshot={{
-        src: "/projects/gitbarn-web.webp",
-        width: 1440,
-        height: 1000,
-        alt: "Git Barn’s public homepage with service navigation, a customer login link, and a photograph of a manure-removal truck.",
-        caption: "The public website introduces the service and provides an entry point to the customer portal.",
-      }}
     >
       <section>
         <h2>From the service website to the customer account</h2>

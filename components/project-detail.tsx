@@ -5,20 +5,14 @@ import { ArrowLeft, ArrowUpRight, Star } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { formatStars, getStars, repoFromUrl } from "@/lib/github";
 import { PageTransition, SharedTitle } from "@/components/page-transition";
+import { projectScreenshots, SCREENSHOT_SIZES, type ProjectSlug } from "@/lib/project-screenshots";
 
 type ProjectDetailProps = {
-  slug: string;
+  slug: ProjectSlug;
   title: string;
   description: string;
   technologies: string[];
   repository: string;
-  screenshot?: {
-    src: string;
-    width: number;
-    height: number;
-    alt: string;
-    caption: string;
-  };
   children: ReactNode;
 };
 
@@ -28,10 +22,10 @@ export async function ProjectDetail({
   description,
   technologies,
   repository,
-  screenshot,
   children,
 }: ProjectDetailProps) {
   const stars = await getStars(repoFromUrl(repository));
+  const screenshot = projectScreenshots[slug];
 
   return (
     <PageTransition>
@@ -67,7 +61,7 @@ export async function ProjectDetail({
 
           {screenshot && <figure className="mb-12">
             <a href={screenshot.src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-border" aria-label={`Open full-size screenshot of ${title}`}>
-              <Image src={screenshot.src} width={screenshot.width} height={screenshot.height} alt={screenshot.alt} sizes="(max-width: 896px) calc(100vw - 48px), 848px" className="h-auto w-full" priority />
+              <Image src={screenshot.src} width={screenshot.width} height={screenshot.height} alt={screenshot.alt} sizes={SCREENSHOT_SIZES} className="h-auto w-full" preload />
             </a>
             <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">{screenshot.caption} Select the image to view it full size.</figcaption>
           </figure>}
