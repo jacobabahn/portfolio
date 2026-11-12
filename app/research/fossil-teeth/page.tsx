@@ -24,7 +24,7 @@ function ResearchFigure({ src, width, height, alt, children, priority = false }:
   return (
     <figure>
       <a href={src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-border" aria-label={`Open full-size figure: ${alt}`}>
-        <Image src={src} width={width} height={height} alt={alt} sizes="(max-width: 720px) calc(100vw - 48px), 672px" className="h-auto w-full" unoptimized loading={priority ? "eager" : "lazy"} />
+        <Image src={src} width={width} height={height} alt={alt} sizes="(max-width: 720px) calc(100vw - 48px), 672px" className="h-auto w-full" loading={priority ? "eager" : "lazy"} />
       </a>
       <figcaption className="mt-3 text-sm leading-relaxed text-muted-foreground">
         {children} Select the image to view it full size.
