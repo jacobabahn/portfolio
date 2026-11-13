@@ -15,10 +15,16 @@ export function PageTransition({ children }: { children: ReactNode }) {
 }
 
 // Pairs a card's title with the heading on its detail page so the browser
-// morphs one into the other.
+// morphs one into the other. The typed classes scale the title by the
+// heading-to-card font-size ratio (see globals.css), which needs to know the
+// direction; untyped navigations fall back to the browser's stretch.
 export function SharedTitle({ id, children }: { id: string; children: ReactNode }) {
   return (
-    <ViewTransition name={`title-${id}`} share="morph" default="none">
+    <ViewTransition
+      name={`title-${id}`}
+      share={{ "nav-forward": "morph-forward", "nav-back": "morph-back", default: "morph" }}
+      default="none"
+    >
       {children}
     </ViewTransition>
   );

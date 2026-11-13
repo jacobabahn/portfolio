@@ -153,7 +153,9 @@
   pointer-events: none;
 }
 
-::view-transition-group(.morph) {
+::view-transition-group(.morph),
+::view-transition-group(.morph-forward),
+::view-transition-group(.morph-back) {
   animation-duration: 400ms;
   animation-timing-function: ease-in-out;
   /* Keep the title above the sliding pages. The browser appends groups that
@@ -161,8 +163,58 @@
      paints over the title on the way back. */
   z-index: 1;
 }
-::view-transition-image-pair(.morph) {
+::view-transition-image-pair(.morph),
+::view-transition-image-pair(.morph-forward),
+::view-transition-image-pair(.morph-back) {
   animation-name: vt-via-blur;
+}
+
+/* The browser stretches both title snapshots to one shared box, which only
+   lines up when the two have the same shape. Below md the heading can wrap
+   onto a second line while the card title doesn't, so the letters crossfade
+   at two different sizes. There, leave each snapshot at its own size and
+   scale both by the heading-to-card font-size ratio instead, so the letters
+   stay one size throughout and only the wrapped words change place. */
+@media not (min-width: 48rem) {
+  :root {
+    --title-morph-scale: 2.25; /* text-4xl heading over a 16px card title */
+  }
+  ::view-transition-old(.morph-forward),
+  ::view-transition-new(.morph-forward),
+  ::view-transition-old(.morph-back),
+  ::view-transition-new(.morph-back) {
+    inline-size: auto;
+    block-size: auto;
+    transform-origin: 0 0;
+  }
+  ::view-transition-old(.morph-forward),
+  ::view-transition-old(.morph-back) {
+    animation:
+      400ms ease-in-out both vt-fade reverse,
+      400ms ease-in-out both vt-title-scale;
+  }
+  ::view-transition-new(.morph-forward),
+  ::view-transition-new(.morph-back) {
+    animation:
+      400ms ease-in-out both vt-fade,
+      400ms ease-in-out both vt-title-scale;
+  }
+  ::view-transition-old(.morph-forward) {
+    --title-scale-from: 1;
+    --title-scale-to: var(--title-morph-scale);
+  }
+  ::view-transition-new(.morph-forward) {
+    --title-scale-from: calc(1 / var(--title-morph-scale));
+    --title-scale-to: 1;
+  }
+  ::view-transition-old(.morph-back) {
+    --title-scale-from: 1;
+    --title-scale-to: calc(1 / var(--title-morph-scale));
+  }
+  ::view-transition-new(.morph-back) {
+    --title-scale-from: var(--title-morph-scale);
+    --title-scale-to: 1;
+  }
 }
 
 ::view-transition-old(.nav-forward),
@@ -193,6 +245,14 @@
 @keyframes vt-via-blur {
   30% {
     filter: blur(3px);
+  }
+}
+@keyframes vt-title-scale {
+  from {
+    scale: var(--title-scale-from);
+  }
+  to {
+    scale: var(--title-scale-to);
   }
 }
 @keyframes vt-fade {
